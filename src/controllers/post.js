@@ -3,6 +3,7 @@ const createpost=require('../database')
 const editpost=require('../database')
 const searchidpost=require('../database')
 const searchusernamepost=require('../database')
+const showimagen=require('../database')
 const post={}
 
 
@@ -47,6 +48,14 @@ post.searchuserpost=(req,res)=> {
         
     }catch(e){
         console.log(e)
+    }
+
+    post.showimagen=(req,res)=>{
+        try{
+            showimagen.showimagen(req,res)
+        }catch(e){
+            console.log(e)
+        }
     }
 
 }

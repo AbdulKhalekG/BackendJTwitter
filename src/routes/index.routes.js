@@ -58,6 +58,10 @@ router.get('/search-following/:id_user2',follow.getfollowing)
 router.delete('/delete-follow/:id_user1',follow.deletefollow)
 router.delete('/delete-following/:id_user2',follow.deletefollowing)
 
+//imagen
+router.get('/show-imagen',post.showimagen)
+router.get('/show-imagen-username',post.showimagenusername)
+
 
 
 router.get('/perfil',(req,res)=>{

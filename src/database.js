@@ -208,6 +208,14 @@ const deletefollowing=async(req,res)=>{
     res.json(response.rows)
 }
 
+const showimagen=async(req,res)=>{
+    const response = await pool.query('select distinct post from imagen')
+    console.log(response);
+    res.json(response.rows)
+}
+
+
+
 
 
 module.exports={
@@ -232,7 +240,9 @@ module.exports={
     deletelikeuser,
     deletelikepost,
     deletefollow,
-    deletefollowing
+    deletefollowing,
+    showimagen,
+    showusernameimagen
     
 }
 

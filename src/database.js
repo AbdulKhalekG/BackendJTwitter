@@ -214,6 +214,13 @@ const showimagen=async(req,res)=>{
     res.json(response.rows)
 }
 
+const showusernameimagen = async (req, res) => {
+    const username = req.params.autor
+    const response = await pool.query('select distinct post from imagen where username=$1', [username])
+    console.log(response);
+    res.json(response.rows)
+  }
+
 
 
 
